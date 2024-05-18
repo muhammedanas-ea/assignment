@@ -1,8 +1,7 @@
 import { useFormik } from "formik";
 import { ConfigSchema } from "../yup/Validation";
 import { useEffect, useState } from "react";
-import { GetConfigData  } from "../api/Api";
-import { FaArrowRight } from "react-icons/fa";
+import { GetConfigData } from "../api/Api";
 import { useNavigate } from "react-router-dom";
 
 export const FetchConfig = () => {
@@ -55,7 +54,7 @@ export const FetchConfig = () => {
           <form onSubmit={handleSubmit} className="flex flex-col mt-5">
             <div className="mb-4">
               <label htmlFor="input-field" className="block font-medium mb-2">
-                Config to load (configId):
+                Config to load (configId)
               </label>
               <input
                 type="text"
@@ -81,16 +80,13 @@ export const FetchConfig = () => {
               </button>
             </div>
           </form>
-          <div className="flex justify-end items-center gap-2 mb-2">
-            <label
-              onClick={() => navigate("/updateremark")}
-              htmlFor="input-field"
-              className="block text-end text-blue-600 font-medium"
-            >
-              Click to update remark
-            </label>
-            <FaArrowRight />
-          </div>
+          <p
+            onClick={() => navigate("/updateremark")}
+            htmlFor="input-field"
+            className="block text-end text-blue-600 cursor-pointer hover:text-blue-700 font-medium"
+          >
+            Click to update remark
+          </p>
           <h2 className="text-2xl font-bold mb-4">Result</h2>
           <div className="grid grid-cols-1 gap-8">
             <div className="col-span-1">
@@ -117,8 +113,8 @@ export const FetchConfig = () => {
         <div className="w-1/2 lg:flex items-center justify-center hidden md:block">
           <div className="p-4">
             <img
-              src="https://ouch-cdn2.icons8.com/Zz6ABya1d68dTxHdZm-wbc1Ww16FNS3F8ERE1KwZYjQ/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTAw/MC8zMDg0NGIxMy0z/ZTEzLTQ1NGEtOTE3/ZC1mYjMyOTg2NjE5/M2Quc3Zn.png"
-              className="object-cover w-full h-full"
+              src="https://img.freepik.com/free-photo/3d-rendering-cartoon-like-boy_23-2150797566.jpg?t=st=1716012348~exp=1716015948~hmac=1146571b5011406a069fd222cb80d8698c6ee4c5cb21c73f6c849e5f4f089e53&w=740"
+              className="object-cover shadow-xl rounded-lg w-full h-full"
               alt=""
             />
           </div>

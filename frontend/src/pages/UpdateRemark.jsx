@@ -1,6 +1,5 @@
 import { useFormik } from "formik";
 import { UpdateSchema } from "../yup/Validation";
-import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { UpdateConfigData } from "../api/Api";
 import { GenerateSuccess } from "../toast/Toast";
@@ -84,16 +83,14 @@ export const UpdateRemark = () => {
               </button>
             </div>
           </form>
-          <div className="flex justify-end items-center gap-2 mb-2">
-            <label
-              onClick={() => navigate("/")}
-              htmlFor="input-field"
-              className="block text-end text-blue-600 font-medium"
-            >
-              Click to fetch config
-            </label>
-            <FaArrowRight />
-          </div>
+
+          <p
+            onClick={() => navigate("/")}
+            htmlFor="input-field"
+            className="block text-end text-blue-600 cursor-pointer hover:text-blue-700 font-medium"
+          >
+            Click to fetch config
+          </p>
         </div>
         <div className="w-1/2 lg:flex items-center justify-center hidden md:block">
           <div className="p-4">

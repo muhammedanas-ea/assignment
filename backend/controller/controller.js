@@ -16,8 +16,8 @@ export const ConfigurationData = async (req, res) => {
 export const UpdateConfigurationData = async (req, res) => {
   try {
     const { configId, remark } = req.body;
-    const CheckConfigId = await Configuration.findOne({ configId: configId });
-    if (CheckConfigId.configId) {
+    const CheckConfigId = await Configuration.exists({ configId: configId });
+    if (CheckConfigId) {
       const updatedData = await Configuration.updateOne(
         { configId: configId },
         { $set: { remark: remark } }
