@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FetchConfig } from "./pages/FetchConfig";
-import UpdateRemark from "./pages/UpdateRemark";
+import {UpdateRemark} from "./pages/UpdateRemark";
 import { ToastContainer } from "react-toastify";
 import './App.css'
 
